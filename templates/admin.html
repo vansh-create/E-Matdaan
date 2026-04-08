@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>E Matdaan Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>🇮🇳 E Matdaan</h2>
+
+        <ul>
+            <li onclick="showSection('analytics')">📊 Analytics</li>
+            <li onclick="showSection('candidates')">🧑 Candidates</li>
+            <li onclick="showSection('voters')">🗳️ Voters</li>
+            <li onclick="showSection('election')">⚙️ Election Control</li>
+            <li onclick="showSection('results')">🏆 Results</li>
+            <li>🚪 Logout</li>
+        </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+
+        <!-- ANALYTICS -->
+        <section id="analytics" class="section active">
+            <h1>Election Analytics</h1>
+
+            <div class="cards">
+                <div class="card">Total Voters <h2>12,540</h2></div>
+                <div class="card">Votes Cast <h2>9,210</h2></div>
+                <div class="card">Candidates <h2>15</h2></div>
+                <div class="card">Turnout <h2>73%</h2></div>
+            </div>
+
+            <canvas id="voteChart"></canvas>
+        </section>
+
+        <!-- CANDIDATES -->
+        <section id="candidates" class="section">
+            <h1>Candidate Management</h1>
+
+            <input id="candidateName" placeholder="Candidate Name">
+            <button onclick="addCandidate()">Add Candidate</button>
+
+            <ul id="candidateList"></ul>
+        </section>
+
+        <!-- VOTERS -->
+        <section id="voters" class="section">
+            <h1>Registered Voters</h1>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Voter ID</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>Rahul Sharma</td>
+                    <td>IND12345</td>
+                    <td>Voted</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- ELECTION CONTROL -->
+        <section id="election" class="section">
+            <h1>Election Control Panel</h1>
+
+            <button onclick="startElection()">Start Election</button>
+            <button onclick="endElection()">End Election</button>
+        </section>
+
+        <!-- RESULTS -->
+        <section id="results" class="section">
+            <h1>Live Results</h1>
+            <p>Results will appear here after election ends.</p>
+        </section>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="admin.js"></script>
+
+</body>
+</html>
