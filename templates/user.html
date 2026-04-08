@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>E Matdaan User Dashboard</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <h2>🇮🇳 E Matdaan</h2>
+
+    <ul>
+        <li onclick="showSection('card')">🪪 Voter Card</li>
+        <li onclick="showSection('ongoing')">🗳️ Ongoing Elections</li>
+        <li onclick="showSection('upcoming')">📅 Upcoming Elections</li>
+        <li onclick="showSection('history')">📜 Voting History</li>
+        <li>🚪 Logout</li>
+    </ul>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="content">
+
+<!-- DIGITAL VOTER CARD -->
+<section id="card" class="section active">
+    <h1>Your Electronic Voter Card</h1>
+
+    <div class="voter-card">
+        <img src="https://i.pravatar.cc/100" class="profile">
+        <h3>Name: Vansh Kesharwani</h3>
+        <p>Voter ID: IND458912</p>
+        <p>State: Uttar Pradesh</p>
+        <p>Status: Eligible to Vote ✅</p>
+    </div>
+</section>
+
+
+<!-- ONGOING ELECTION -->
+<section id="ongoing" class="section">
+    <h1>Ongoing Elections</h1>
+
+    <div class="election-box">
+        <h3>Lok Sabha Election 2026</h3>
+        <p>Status: LIVE</p>
+
+        <div class="party-list" id="partyList">
+
+            <div class="party">
+                <h4>Party A</h4>
+                <button onclick="vote('Party A')">Vote</button>
+            </div>
+
+            <div class="party">
+                <h4>Party B</h4>
+                <button onclick="vote('Party B')">Vote</button>
+            </div>
+
+            <div class="party">
+                <h4>Party C</h4>
+                <button onclick="vote('Party C')">Vote</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- UPCOMING -->
+<section id="upcoming" class="section">
+    <h1>Upcoming Elections</h1>
+
+    <div class="election-box">
+        <h3>State Assembly Election</h3>
+        <p>Date: 15 Aug 2026</p>
+        <p>Status: Upcoming</p>
+    </div>
+
+</section>
+
+
+<!-- HISTORY -->
+<section id="history" class="section">
+    <h1>Voting History</h1>
+
+    <table>
+        <tr>
+            <th>Election</th>
+            <th>Party</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>Municipal Election</td>
+            <td>Party B</td>
+            <td>Voted ✅</td>
+        </tr>
+    </table>
+</section>
+
+</main>
+
+</div>
+
+<script src="user.js"></script>
+
+</body>
+</html>
