@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E Matdaan Portal | India</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <h2>🇮🇳 E Matdaan Portal</h2>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Elections</a></li>
+        <li><a href="#">Guidelines</a></li>
+        <li><a href="#">Contact</a></li>
+        <button class="login-btn">Login</button>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Digital Voting for a Strong Democracy</h1>
+        <p>Secure • Transparent • Fast Online Voting System for India</p>
+        <button onclick="startVoting()">Vote Now</button>
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <h2>Why E Matdaan?</h2>
+
+    <div class="feature-box">
+        <div class="card">
+            <h3>🔐 Secure Voting</h3>
+            <p>End-to-end encrypted and Aadhaar verified system.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ Fast Process</h3>
+            <p>Vote anytime, anywhere without standing in queues.</p>
+        </div>
+
+        <div class="card">
+            <h3>📊 Transparent</h3>
+            <p>Real-time vote monitoring and fair counting.</p>
+        </div>
+    </div>
+</section>
+
+<!-- STEPS -->
+<section class="steps">
+    <h2>How to Vote</h2>
+
+    <div class="step-container">
+        <div class="step">1️⃣ Register</div>
+        <div class="step">2️⃣ Verify Identity</div>
+        <div class="step">3️⃣ Cast Vote</div>
+        <div class="step">4️⃣ Confirmation</div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Government of India | E Matdaan Portal</p>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
